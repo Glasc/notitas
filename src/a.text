@@ -54,3 +54,20 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+
+# Environment variables declared in this file are automatically made available to Prisma.
+# See the documentation for more detail: https://pris.ly/d/prisma-schema#accessing-environment-variables-from-the-schema
+
+# Prisma supports the native connection string format for PostgreSQL, MySQL, SQLite, SQL Server, MongoDB and CockroachDB.
+# See the documentation for all the connection string options: https://pris.ly/d/connection-strings
+
+# postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=SCHEMA
+
+DATABASE_URL="postgresql://postgres:123@localhost:5432/notitasdb?schema=public"
+
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET="YRTCSJWy/oYzzEvHLvcr+1HN7/z2dnGbMzyu3xNn92A="
+
+DISCORD_CLIENT_ID=996457259649466508
+DISCORD_CLIENT_SECRET=O1cCFdm6Z3kz07rXnJDhmacZ0VBMRF2D
