@@ -5,7 +5,7 @@ import PersonList from '../features/person-list/PersonList'
 const Home: NextPage = () => {
   return (
     <div className=''>
-      <PersonList />
+      Hello world
     </div>
   )
 }
