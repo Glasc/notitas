@@ -23,16 +23,14 @@ const Login: NextPage = ({
     <>
       Not signed in xd
       <br />
-      {Object?.values(providers).map((provider: any) => (
-        <div key={provider?.name}>
-          <button
-            className='btn btn-accent'
-            onClick={() => signIn(provider?.id)}
-          >
-            Sign in with {provider?.name}
-          </button>
-        </div>
-      ))}
+      {providers &&
+        Object?.values(providers)?.map((provider: any) => (
+          <div key={provider?.name}>
+            <button className='btn btn-accent' onClick={() => signIn(provider?.id)}>
+              Sign in with {provider?.name}
+            </button>
+          </div>
+        ))}
     </>
   )
 }
@@ -40,7 +38,7 @@ const Login: NextPage = ({
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const providers = await getProviders()
   const data = await getSession({ req })
-  
+
   return {
     props: { providers, data },
   }
